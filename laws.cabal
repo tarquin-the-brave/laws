@@ -1,0 +1,33 @@
+name:                laws
+version:             0.4
+synopsis:            Properties for common laws
+description:
+  Predicates for checking the 'Monoid', 'Functor', 'Applicative' and
+  'Monad' laws.
+license:             BSD3
+license-file:        LICENSE
+author:              Danny Navarro
+maintainer:          j@dannynavarro.net
+homepage:            http://github.com/jdnavarro/laws
+bug-reports:         http://github.com/jdnavarro/laws/issues
+category:            Testing
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  README.md CHANGELOG.md stack.yaml
+
+source-repository head
+  type: git
+  location: git://github.com/jdnavarro/laws.git
+
+library
+  ghc-options:         -Wall
+  default-language:    Haskell2010
+  hs-source-dirs:      src
+  exposed-modules:     Control.Applicative.Laws,
+                       Control.Monad.Laws,
+                       Data.Functor.Laws,
+                       Data.Monoid.Laws
+  build-depends:       base >=4.6 && <4.9
+
+  if impl(ghc < 7.8)
+     build-depends: tagged >=0.7.2

@@ -1,8 +1,9 @@
 # Change Log
-All notable changes to this project will be documented in this file. This file
-follows the formatting recommendations from [Keep a
-CHANGELOG](http://keepachangelog.com/). This project adheres to [Semantic
-Versioning](http://semver.org/).
+All notable changes to this project will be documented in this file. See [Keep
+CHANGELOG](http://keepachangelog.com/).
+
+## [Unreleased][unreleased]
+- Fork from [`smallcheck-laws`](https://github.com/jdnavarro/smallcheck-laws).
 
 ## [0.3] - 2015-09-07
 ### Added
@@ -24,6 +25,7 @@ Versioning](http://semver.org/).
 - Monoid Laws.
 - Monad laws.
 
+[unreleased]: https://github.com/jdnavarro/smallcheck-laws/compare/v0.3...HEAD
 [0.3]: https://github.com/jdnavarro/smallcheck-laws/compare/v0.2...v0.3
 [0.2]: https://github.com/jdnavarro/smallcheck-laws/compare/v0.1...v0.2
 [0.1]: https://github.com/jdnavarro/smallcheck-laws/compare/bf1caa...v0.1
