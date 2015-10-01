@@ -6,7 +6,6 @@ module Data.Monoid.Laws
   , rightIdentity
   , associativity
   , mconcat
-  , Property
   ) where
 
 #if MIN_VERSION_base(4,8,0)
@@ -17,28 +16,26 @@ import Data.Monoid (Monoid, mappend, mempty)
 import Data.Monoid ((<>))
 import qualified Data.Monoid as Monoid (mconcat)
 
-type Property a = a -> Bool
-
 -- |
 -- @
 -- 'mempty' '<>' x ≡ x
 -- @
-leftIdentity :: (Eq a, Monoid a) => Property a
+leftIdentity :: (Eq a, Monoid a) => a -> Bool
 leftIdentity x = mempty <> x == x
 
 -- |
 -- @
 -- x '<>' 'mempty' ≡ x
 -- @
-rightIdentity :: (Eq a, Monoid a) => Property a
+rightIdentity :: (Eq a, Monoid a) => a -> Bool
 rightIdentity x = x <> mempty == x
 
 -- |
 -- @
 -- x '<>' (y '<>' z) ≡ (x '<>' y) '<>' z
 -- @
-associativity :: (Eq a, Monoid a) => Property (a,a,a)
-associativity (x,y,z) = x <> (y <> z) == (x <> y) <> z
+associativity :: (Eq a, Monoid a) => a -> a -> a -> Bool
+associativity x y z = x <> (y <> z) == (x <> y) <> z
 
 -- |
 -- @
@@ -46,5 +43,5 @@ associativity (x,y,z) = x <> (y <> z) == (x <> y) <> z
 -- @
 --
 -- This is only necessary when implementing 'Data.Monoid.mconcat' by hand.
-mconcat :: (Eq a, Monoid a) => Property [a]
+mconcat :: (Eq a, Monoid a) => [a] -> Bool
 mconcat l = Monoid.mconcat l == foldr mappend mempty l
