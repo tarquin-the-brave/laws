@@ -25,7 +25,7 @@ CHANGELOG](http://keepachangelog.com/).
 - Monoid Laws.
 - Monad laws.
 
-[unreleased]: https://github.com/jdnavarro/smallcheck-laws/compare/v0.3...HEAD
-[0.3]: https://github.com/jdnavarro/smallcheck-laws/compare/v0.2...v0.3
-[0.2]: https://github.com/jdnavarro/smallcheck-laws/compare/v0.1...v0.2
-[0.1]: https://github.com/jdnavarro/smallcheck-laws/compare/bf1caa...v0.1
+[unreleased]: https://github.com/jdnavarro/laws/compare/v0.3...HEAD
+[0.3]: https://github.com/jdnavarro/laws/compare/v0.2...v0.3
+[0.2]: https://github.com/jdnavarro/laws/compare/v0.1...v0.2
+[0.1]: https://github.com/jdnavarro/laws/compare/bf1caa...v0.1

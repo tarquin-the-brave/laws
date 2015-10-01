@@ -40,8 +40,6 @@ rightIdentity x = x <> mempty == x
 associativity :: (Eq a, Monoid a) => Property (a,a,a)
 associativity (x,y,z) = x <> (y <> z) == (x <> y) <> z
 
--- * mconcat
-
 -- |
 -- @
 -- 'mconcat' ≡ 'foldr' 'mappend' 'mempty'

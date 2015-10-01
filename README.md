@@ -3,7 +3,7 @@
 [![Hackage Version](https://img.shields.io/hackage/v/laws.svg)](https://hackage.haskell.org/package/laws)
 [![Build Status](https://img.shields.io/travis/jdnavarro/laws.svg)](https://travis-ci.org/jdnavarro/laws)
 
-Helper predicates/properties for testing the following laws:
+Helper predicates for property testing the following laws:
 
 - Monoid
 - Functor
